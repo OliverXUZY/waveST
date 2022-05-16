@@ -1,0 +1,29 @@
+Package: waveST
+Title: What the Package Does (One Line, Title Case)
+Version: 1.0
+Authors@R: 
+    c(person(given = "Zhuoyan",
+           family = "Xu",
+           role = c("aut", "cre"),
+           email = "zhuoyan.xu@wisc.edu"),
+      person(given = "Kris",
+           family = "Sankaran",
+           role = c("aut"),
+           email = "ksankaran@wisc.edu")
+      )
+Description: What the package does (one paragraph).
+Imports: tidyverse, waveslim, methods, fields, reshape2, 
+          Biobase, genefilter, STexampleData, SpatialExperiment,
+          ggrepel, magrittr, patchwork, ggplot2, tibble, purrr,
+          SummarizedExperiment
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
