@@ -6,3 +6,5 @@ R package about wavelet-guided methods for Spatial Transcriptomics
 
 ## License
 Copyright (c) 2022, Zhuoyan Xu and Kris Sankaran.
+
+The software is licensed under MIT and the data included is licensed under CC0, see `data`.
