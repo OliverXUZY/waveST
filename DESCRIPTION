@@ -16,7 +16,7 @@ Imports: tidyverse, waveslim, methods, fields, reshape2,
           Biobase, genefilter, STexampleData, SpatialExperiment,
           ggrepel, magrittr, patchwork, ggplot2, tibble, purrr,
           SummarizedExperiment
-License: MIT + file LICENSE
+License: CC0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
