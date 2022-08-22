@@ -5,4 +5,4 @@ R package about wavelet-guided methods for Spatial Transcriptomics
 
 
 ## License
-The software and the data included is licensed under CC0.
+The software and the data included are licensed under CC0.
