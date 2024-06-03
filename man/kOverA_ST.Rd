@@ -17,5 +17,5 @@ Collect spatially resolved transcriptomics datasets in SpatialExperiment Biocond
 then use kOverA select genes
 }
 \examples{
-res = kOverA_ST(k = 3,A = 7)
+res = kOverA_ST(k = 3, A = 7)
 }

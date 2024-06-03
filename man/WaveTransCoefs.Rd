@@ -12,7 +12,7 @@ WaveTransCoefs(x, wf = "d4", J = 4, thresholdMethod = NULL, tau = NULL)
 
 \item{wf}{name of the wavelet filter to use}
 
-\item{J}{depth of the wavelet basis decomposition, must be a number less than or equal to log(min{M,N},2)}
+\item{J}{depth of the wavelet basis decomposition, must be a number less than or equal to log(min(M,N),2)}
 
 \item{thresholdMethod}{wavelet shrinkage method used  "hybrid" thresholding or "manual" thresholding, see "details"}
 
@@ -28,9 +28,11 @@ indicated thresholds.
 \details{
 The coefficients after wavelet thresformation and thresholding is a list structure
 containing the 3J+1 sub-matrices from the decomposition. The \code{coef} is the vectorized
-coefficients.\preformatted{     The "hybrid" thresholding combined the SURE and universal thresholds. The manual thresholding set a constant threshold.
+coefficients.
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{     The "hybrid" thresholding combined the SURE and universal thresholds. The manual thresholding set a constant threshold.
      see Section 3.2 in references.
-}
+}\if{html}{\out{</div>}}
 }
 \references{
 G. P. Nason. Wavelet methods in statistics with R. Springer, 2008.

@@ -31,7 +31,7 @@ directly without wavelet technique, "wave" means we apply wavelet transformation
 
 \item{wf}{name of the wavelet filter to use}
 
-\item{J}{depth of the wavelet basis decomposition, must be a number less than or equal to log(min{M,N},2)}
+\item{J}{depth of the wavelet basis decomposition, must be a number less than or equal to log(min(M,N),2)}
 
 \item{thresholdMethod}{wavelet shrinkage method used  "hybrid" thresholding or "manual" thresholding, see "details"}
 
@@ -46,23 +46,26 @@ Decompose input in \code{\link{waveST}} object with wavelet transformation and t
 \details{
 If the number of factors \code{K} is not given, the use \code{bar} to select \code{K}, it
 conduct SVD first,only keep the singular values larger than \code{bar}, the number of
-kept values are selected \code{K}.\preformatted{     The "hybrid" thresholding or "manual" thresholding, see \code{\link{WaveTransCoefs}}.
-     
+kept values are selected \code{K}.
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{     The "hybrid" thresholding or "manual" thresholding, see \code{\link{WaveTransCoefs}}.
+
      The output contains:
      \\enumerate\{
      \\item \code{f} factor matrix, representing factor genes
-     \\item \code{D} middle diagonal matrix 
+     \\item \code{D} middle diagonal matrix
      \\item \code{l} loading matrix
      \\item \code{recon} The fitted reconstruction matrix, estimated data
      \}
-     
-     If wavelet method is used, \code{f}, \code{D}, \code{l} cooresponding to the decomposition 
+
+     If wavelet method is used, \code{f}, \code{D}, \code{l} cooresponding to the decomposition
      result for coefficient matrix. \code{recon} is still the fitted matrix of original input.
-}
+}\if{html}{\out{</div>}}
 }
 \examples{
-res = kOverA_ST(k = 3,A = 7)
-viz = res$viz; df = res$df
-wave = waveST(data = df[,1:5], spatial = viz)
+res = kOverA_ST(k = 3, A = 7)
+viz = res$viz
+df = res$df
+wave = waveST(data = df[, 1:5], spatial = viz)
 wave = decompose(wave, "raw", "SVD", K = 5)
 }
