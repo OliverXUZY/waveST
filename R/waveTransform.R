@@ -1,4 +1,5 @@
 #### wavelets and shrinkage functions
+utils::globalVariables(c("."))
 
 #' wavelet transformation
 #'
