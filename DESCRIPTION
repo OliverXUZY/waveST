@@ -11,18 +11,28 @@ Authors@R:
            role = c("aut"),
            email = "ksankaran@wisc.edu")
       )
-Description: This package includes tools for performing wavelet-based matrix factorization of spatial transcriptomic data. This supports visualization for features at multiple scales of variation.
+Maintainer: Zhuoyan Xu <zhuoyan.xu@wisc.edu>
+Description: This package includes tools for performing wavelet-based matrix factorization of spatial transcriptomic data. This supports visualization for features at multiple scales of variation. For more details, please refer to our paper "Spatial transcriptomics dimensionality reduction using wavelet bases". 
 biocViews: Statistics, SpatialData
 Imports: tidyverse, waveslim, methods, fields, reshape2, genefilter,
     STexampleData, SpatialExperiment, ggrepel, magrittr, patchwork, ggplot2, tibble,
     purrr, SummarizedExperiment
+Collate: 
+    'waveSTClass.R'
+    'EBMF.R'
+    'bricks.R'
+    'pipeline_func.R'
+    'simulation_data.R'
+    'raws.R'
+    'waveTransform.R'
+    'plot.R'
 License: CC0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Depends: 
-    R (>= 2.12)
+    R (>= 3.5.0)
 Suggests: 
     knitr,
     rmarkdown
