@@ -16,6 +16,3 @@ kOverA_ST(k = 5, A = 50)
 Collect spatially resolved transcriptomics datasets in SpatialExperiment Bioconductor format using Visium_humanDLPFC_3_13,
 then use kOverA select genes
 }
-\examples{
-res = kOverA_ST(k = 3, A = 7)
-}

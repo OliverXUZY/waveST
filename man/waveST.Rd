@@ -31,9 +31,3 @@ matrix (like settings in simulations).
      The  \code{output} is NA once created. The values will be updated once called \code{\link{decompse}}.
 }\if{html}{\out{</div>}}
 }
-\examples{
-res = kOverA_ST(k = 3, A = 7)
-viz = res$viz
-df = res$df
-wave = waveST(data = df, spatial = viz)
-}

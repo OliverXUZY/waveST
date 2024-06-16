@@ -145,8 +145,6 @@ generateCoorM = function(N_dup) {
 #' @export
 #' @param k The number of elements that have to exceed A.
 #' @param A The value you want to exceed.
-#' @examples
-#' res = kOverA_ST(k = 3, A = 7)
 ### This function get n*p matrix (p genes after k over A selected) and coordinates
 kOverA_ST = function(k = 5, A = 50) {
   # pipe1_STE = function(k = 5, A = 50){
@@ -757,4 +755,20 @@ pipe_recons_per_gene = function(raws, ...) {
     SVD_wave = res_wave$SVD$recon_SVD, EBMF_wave = res_wave$EBMF$recon_EBMF,
     isTest = isTest
   ))
+}
+
+
+#' Ensure STexampleData is installed
+#'
+#' This function checks if the STexampleData package is installed and installs it if necessary.
+#' @importFrom BiocManager install
+#' @importFrom utils install.packages
+#' @export
+install_STexampleData <- function() {
+  if (!requireNamespace("STexampleData", quietly = TRUE)) {
+    if (!requireNamespace("BiocManager", quietly = TRUE)) {
+      utils::install.packages("BiocManager")
+    }
+    BiocManager::install("STexampleData")
+  }
 }

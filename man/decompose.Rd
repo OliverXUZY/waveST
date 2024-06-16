@@ -62,10 +62,3 @@ kept values are selected \code{K}.
      result for coefficient matrix. \code{recon} is still the fitted matrix of original input.
 }\if{html}{\out{</div>}}
 }
-\examples{
-res = kOverA_ST(k = 3, A = 7)
-viz = res$viz
-df = res$df
-wave = waveST(data = df[, 1:5], spatial = viz)
-wave = decompose(wave, "raw", "SVD", K = 5)
-}

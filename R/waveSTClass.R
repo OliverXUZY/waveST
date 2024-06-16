@@ -68,11 +68,6 @@ prototype = list(
 #'
 #'          The content of \code{output} depends on whether use wavelet, and the decomposition methods.
 #'          The  \code{output} is NA once created. The values will be updated once called \code{\link{decompse}}.
-#' @examples
-#' res = kOverA_ST(k = 3, A = 7)
-#' viz = res$viz
-#' df = res$df
-#' wave = waveST(data = df, spatial = viz)
 waveST = function(data, spatial = NA, input = NA, level = 6) {
   if (sum(is.na(spatial)) == 1) {
     spatial = matrix()
@@ -132,12 +127,6 @@ waveST = function(data, spatial = NA, input = NA, level = 6) {
 #'          If wavelet method is used, \code{f}, \code{D}, \code{l} cooresponding to the decomposition
 #'          result for coefficient matrix. \code{recon} is still the fitted matrix of original input.
 #'
-#' @examples
-#' res = kOverA_ST(k = 3, A = 7)
-#' viz = res$viz
-#' df = res$df
-#' wave = waveST(data = df[, 1:5], spatial = viz)
-#' wave = decompose(wave, "raw", "SVD", K = 5)
 decompose = function(waveST, wavemethod = c("raw", "wave"), decom_method = c("SVD", "EBMF"),
                      K = NULL, bar = 500, wf = "d4", J = 5, thresholdMethod = "manual", tau = 0) {
   stopifnot(is(waveST) == "waveST")
