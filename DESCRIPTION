@@ -14,8 +14,8 @@ Authors@R:
 Maintainer: Zhuoyan Xu <zhuoyan.xu@wisc.edu>
 Description: Provides tools for performing wavelet-based matrix factorization of spatial transcriptomic data. This supports visualization for features at multiple scales of variation. For more details, please refer to our paper "Spatial transcriptomics dimensionality reduction using wavelet bases". 
 biocViews: Statistics, SpatialData
-Imports: BiocManager, tidyverse, waveslim, methods, fields, reshape2, genefilter,
-    STexampleData, SpatialExperiment, ggrepel, magrittr, patchwork, ggplot2, tibble,
+Imports: tidyverse, waveslim, methods, fields, reshape2, genefilter,
+    SpatialExperiment, ggrepel, magrittr, patchwork, ggplot2, tibble,
     purrr, SummarizedExperiment
 Collate: 
     'waveSTClass.R'
@@ -26,6 +26,7 @@ Collate:
     'raws.R'
     'waveTransform.R'
     'plot.R'
+    'res.R'
 License: CC0
 Encoding: UTF-8
 LazyData: true
@@ -38,3 +39,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+LazyDataCompression: xz

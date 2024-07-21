@@ -32,8 +32,6 @@ NULL
 NULL
 #' @import tidyverse
 NULL
-#' @import STexampleData
-NULL
 #' @import tibble
 NULL
 #' @import purrr

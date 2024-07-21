@@ -116,7 +116,8 @@ plot(decomp, k = 1, wave = TRUE)
 # Part 2: Real Data
 ## Step 1: Data Generation by _k_ over _A_ filter.
 ```{r}
-res = kOverA_ST(k = 3, A = 7)
+# res = kOverA_ST(k = 3, A = 7)
+data("res", package = "waveST")
 viz = res$viz
 df = res$df
 ```

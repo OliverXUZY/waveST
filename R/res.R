@@ -1,0 +1,11 @@
+#' Sample Spatial Transcriptomics Data
+#'
+#' A dataset containing sample spatial transcriptomics data with coordinates and gene expression values.
+#'
+#' @format A list with 2 elements:
+#' \describe{
+#'   \item{viz}{A tibble with 4,992 rows and 2 columns, containing spatial coordinates}
+#'   \item{df}{A numeric matrix with 4,992 rows and 19 columns, containing gene expression values}
+#' }
+#' @source Generated from STexampleData package
+"res"

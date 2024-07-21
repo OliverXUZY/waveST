@@ -134,35 +134,9 @@ generateCoorM = function(N_dup) {
 
 
 
-#### function for get n by p data
 
-#' k over A method for spatially resolved transcriptomics dataset
-#'
-#' Collect spatially resolved transcriptomics datasets in SpatialExperiment Bioconductor format using Visium_humanDLPFC_3_13,
-#' then use kOverA select genes
 
-#' @docType methods
-#' @export
-#' @param k The number of elements that have to exceed A.
-#' @param A The value you want to exceed.
-### This function get n*p matrix (p genes after k over A selected) and coordinates
-kOverA_ST = function(k = 5, A = 50) {
-  # pipe1_STE = function(k = 5, A = 50){
-  spe = Visium_humanDLPFC()
 
-  coor = spatialCoords(spe)
-  raw = assay(spe)
-  viz = as_tibble(coor)
-
-  ## gene filter
-  f1 = kOverA(k, A)
-  ffun_combined = filterfun(f1)
-  wh3 = genefilter(raw, ffun_combined)
-  df = t(raw[wh3, ] %>% as.matrix())
-  # df = as.matrix(df)
-
-  return(list(viz = viz, df = df))
-}
 
 
 ############ ==============#####==============#####==============#####==============#####==============
@@ -758,17 +732,3 @@ pipe_recons_per_gene = function(raws, ...) {
 }
 
 
-#' Ensure STexampleData is installed
-#'
-#' This function checks if the STexampleData package is installed and installs it if necessary.
-#' @importFrom BiocManager install
-#' @importFrom utils install.packages
-#' @export
-install_STexampleData <- function() {
-  if (!requireNamespace("STexampleData", quietly = TRUE)) {
-    if (!requireNamespace("BiocManager", quietly = TRUE)) {
-      utils::install.packages("BiocManager")
-    }
-    BiocManager::install("STexampleData")
-  }
-}
